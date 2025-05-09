@@ -1,0 +1,28 @@
+const mongoose = require('mongoose');
+const validator = require('validator');
+const doctor = new mongoose.Schema({
+    name:{
+        type:String,
+        required:[true,'please enter the name']
+    },
+    email:{
+        type:String,
+        required:[true,'please enter the email address'],
+        validate:[validator.isEmail,'please enter a valid email']
+    },
+    password:{
+        type:String,
+        required:[true,'please set a password to continue'],
+        minlength:8,
+        select:false
+    },
+    confirmPassword:{
+        type:String,
+        validator:function(value) {
+            return value === this.password
+        },
+        message:'password and confirm password does not match'
+    }
+})
+const DocSchema = mongoose.model('Doctor',doctor);
+module.exports = DocSchema;
