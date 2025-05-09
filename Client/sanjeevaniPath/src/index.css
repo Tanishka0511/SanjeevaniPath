@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3 {
+    color: #222;
+  }
+  
+  a {
+    color: inherit;
+  }
+  
