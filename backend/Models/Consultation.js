@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const consultation = new mongoose.Schema({
     Patient:{
-        type:String,
+        type:mongoose.Schema.Types.ObjectId,
         ref:'User',
         required:[true,'please enter the patient name']
     },
     Doctor:{
-        type:String,
+        type:mongoose.Schema.Types.ObjectId,
         ref:'Doctor',
         required:[true,'please enter the doctor name']
     },
@@ -27,10 +27,7 @@ const consultation = new mongoose.Schema({
         enum:['scheduled','success','in-progress','cancelled'],
         default:'scheduled'
     },
-    prescription:{
-        type:String,
-        required:[true,'enter a prescription']
-    },
+  
     information:{
         type:String
     }
