@@ -5,6 +5,10 @@ const doctor = new mongoose.Schema({
         type:String,
         required:[true,'please enter the name']
     },
+    qualification:{
+        type:String,
+        required:[true,'please enter the degree information']
+    },
     email:{
         type:String,
         required:[true,'please enter the email address'],
@@ -22,6 +26,7 @@ const doctor = new mongoose.Schema({
     },
     confirmPassword:{
         type:String,
+        select:false,
         validator:function(value) {
             return value === this.password
         },

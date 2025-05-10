@@ -2,10 +2,12 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const AuthUserRouter = require('./Routers/Userrouter');
+const AuthDocRouter = require('./Routers/DoctorRoute');
 const PORT = 9556;
 const app = express();
 app.use(express.json());
 app.use('/api',AuthUserRouter);
+app.use('/api',AuthDocRouter);
 mongoose.connect('mongodb://localhost:27017/Sanjeevni',{
     useNewUrlParser:true,
     useUnifiedTopology:true
