@@ -10,6 +10,10 @@ const doctor = new mongoose.Schema({
         required:[true,'please enter the email address'],
         validate:[validator.isEmail,'please enter a valid email']
     },
+    speciality:{
+        type:String,
+        required:[true,'please enter the speciality']
+    },
     password:{
         type:String,
         required:[true,'please set a password to continue'],
