@@ -27,7 +27,15 @@ const consultation = new mongoose.Schema({
         enum:['scheduled','success','in-progress','cancelled'],
         default:'scheduled'
     },
-  
+    videoSessionLink:{
+        type:String,
+        default:'',
+        select:false
+    },
+    transcriptId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Transcript'
+    },
     information:{
         type:String
     }
