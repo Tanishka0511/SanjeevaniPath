@@ -1,0 +1,66 @@
+.consultation-form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: #f7f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.consultation-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.submit-btn, .copy-btn {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #5F7161;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover, .copy-btn:hover {
+  background-color: #4b5d4f;
+}
+
+.success-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e6ffed;
+  border: 1px solid #b2dfdb;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.success-box a {
+  display: block;
+  margin: 10px 0;
+  color: #00796b;
+  font-weight: bold;
+  text-decoration: none;
+}

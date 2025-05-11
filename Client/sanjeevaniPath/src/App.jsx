@@ -9,6 +9,9 @@ import RedirectToTiming from "./pages/RedirectToTIming";
 import ConfirmationPage from "./pages/ConfirmationPage";
 import DocConfirmation from "./pages/DocConfirmation";
 import SelectCons from "./pages/SelectCons";
+import VideoConsulation from "./pages/videoConsulation";
+import VideoLink from "./pages/VideoLink";
+import Chatbot from "./pages/ChatBot";
 
 const App = () => (
   <Router>
@@ -22,6 +25,10 @@ const App = () => (
        <Route path="/confirmPage" element={<ConfirmationPage/>}/>
        <Route path="/confirmDoc" element={<DocConfirmation/>}/>
        <Route path="/selectCons" element={<SelectCons/>}/>
+        <Route path="/videoCons" element={<VideoConsulation/>}/>
+        <Route path="/video-link" element={<VideoLink/>}/>
+         <Route path="/chatbot" element={<Chatbot />} />
+
 
     </Routes>
   </Router>

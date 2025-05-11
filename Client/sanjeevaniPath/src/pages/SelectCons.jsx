@@ -8,6 +8,9 @@ const SelectCons = () => {
   const handleClickChat = () => {
     navigate('/redirectToTiming');
   };
+  const handleClickVideo=()=>{
+    navigate('/videoCons');
+  }
 
   return (
     <div className="select-consultation-wrapper">
@@ -20,7 +23,7 @@ const SelectCons = () => {
           <button className="select-chat-button" onClick={handleClickChat}>
             💬 Chat with Doctor
           </button>
-          <button className="select-video-button">
+          <button className="select-video-button" onClick={handleClickVideo}>
             🎥 Video Consultation
           </button>
         </div>

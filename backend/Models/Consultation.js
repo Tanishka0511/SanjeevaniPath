@@ -18,10 +18,6 @@ const consultation = new mongoose.Schema({
         type:String,
         required:true,
     },
-    scheduledat:{
-        type:Date,
-        required:true
-    },
     status:{
         type:String,
         enum:['scheduled','success','in-progress','cancelled'],
