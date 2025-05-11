@@ -132,7 +132,6 @@
   cursor: not-allowed;
 }
 
-/* Underline above "What time works best?" */
 .time-selection h4:nth-of-type(2)::before {
   content: '';
   display: block;
@@ -142,7 +141,6 @@
   margin-bottom: 10px;
 }
 
-/* Reduce gap between "What time works best?" and showing time */
 .time-selection p {
   margin-top: -10px;
   margin-bottom: 10px;

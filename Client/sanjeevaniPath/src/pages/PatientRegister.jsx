@@ -65,12 +65,13 @@ const PatientRegister = () => {
 
   return (
     <div className="patient-login-container">
-      <div className="back-button-wrapper">
+       <div className="login-card">
+      <div className="back-button-wrapppat">
         <button className="back-button" onClick={handleBackToHome}>
           ← Back to Home
         </button>
       </div>
-      <div className="login-card">
+     
         <div className="image-side">
           <img src={loginImage} alt="Doctor and patient" />
           <div className="image-overlay-text">

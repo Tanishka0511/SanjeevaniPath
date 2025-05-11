@@ -81,13 +81,15 @@ const DoctorRegister = () => {
 
   return (
     <div className="doctors-login-container">
-      <div className="back-button-wrapper">
+      <div className="login-card">
+           <div className="form-side">
+      <div className="back-button-wrap">
         <button className="back-button" onClick={handleBackToHome}>
           ← Back to Home
         </button>
       </div>
-      <div className="login-card">
-        <div className="form-side">
+      
+     
           <h2>
             Welcome! <br /> SignUp to create your account
           </h2>

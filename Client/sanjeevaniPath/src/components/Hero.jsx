@@ -9,7 +9,7 @@ export default function Home() {
     navigate('./login')
   }
   const handleClickCons=()=>{
-    navigate('./selectCons')
+    navigate('./register')
   }
   return (
     <div className="homepage">

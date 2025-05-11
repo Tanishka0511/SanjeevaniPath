@@ -51,13 +51,14 @@ const LoginPage = () => {
 
   return (
     <div className="register-login-container">
-      <div className="back-button-wrapper">
-        <button className="back-button" onClick={handleBackToHome}>
+      <div className="login-card">
+        <div className="form-side">
+      <div className="back-button-wrappLogin">
+        <button className="back-buttonn" onClick={handleBackToHome}>
           ← Back to Home
         </button>
       </div>
-      <div className="login-card">
-        <div className="form-side">
+      
           <h2>
             Welcome to <br /> SanjeevaniPath
           </h2>
