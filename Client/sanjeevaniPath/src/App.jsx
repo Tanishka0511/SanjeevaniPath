@@ -17,19 +17,17 @@ const App = () => (
   <Router>
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/login" element={<LoginPage/>} />
-      <Route path="/patient-login" element={<PatientRegister/>}/>
-      <Route path="/doctor-login" element={<DoctorRegister/>}/>
-      <Route path="/register" element={<Register/>}/>
-       <Route path="/redirectToTiming" element={<RedirectToTiming/>}/>
-       <Route path="/confirmPage" element={<ConfirmationPage/>}/>
-       <Route path="/confirmDoc" element={<DocConfirmation/>}/>
-       <Route path="/selectCons" element={<SelectCons/>}/>
-        <Route path="/videoCons" element={<VideoConsulation/>}/>
-        <Route path="/video-link" element={<VideoLink/>}/>
-         <Route path="/chatbot" element={<Chatbot />} />
-
-
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/patient-login" element={<PatientRegister />} />
+      <Route path="/doctor-login" element={<DoctorRegister />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/redirectToTiming" element={<RedirectToTiming />} />
+      <Route path="/confirmPage" element={<ConfirmationPage />} />
+      <Route path="/confirmDoc" element={<DocConfirmation />} />
+      <Route path="/selectCons" element={<SelectCons />} />
+      <Route path="/videoCons" element={<VideoConsulation />} />
+      <Route path="/video-link" element={<VideoLink />} />
+      <Route path="/chatbot" element={<Chatbot />} />
     </Routes>
   </Router>
 );

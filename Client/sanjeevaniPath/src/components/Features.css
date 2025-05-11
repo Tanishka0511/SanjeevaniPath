@@ -1,86 +1,10 @@
-/* .features-section {
-  background: linear-gradient(to right, #F2F9F2, #e0efe0); 
-  min-height: 100vh;
-  padding: 60px 20px;
-}
-
-.features-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: start;
-}
-
-.features-header h2 {
-  font-size: 32px;
-  color: #5F7161; 
-  margin-bottom: 10px;
-  
-}
-@media(max-width:1339px) and (min-width:1024px){
-  .features-header h2{
-    margin: 0 340px;
-  }
-}
-
-.features-header p {
-  font-size: 18px;
-  color: #333; 
-  margin-bottom: 40px;
-}
-
-.features-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
-
-.feature-card {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.3s ease;
-}
-
-.feature-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 119, 182, 0.2);
-}
-
-.feature-icon {
-
-  font-size: 24px;
-  padding: 12px;
-  background-color: #d6ebe0;
-  color: #4a5c4d;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  flex-shrink: 0;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.feature-card h3 {
-  font-size: 20px;
-  color: #5F7161;
-  margin-bottom: 10px;
-}
-
-.feature-card p {
-  font-size: 16px;
-  color: #333; 
-} */
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
 .features-section {
-  background: linear-gradient(to right, #F2F9F2, #e0efe0); 
+  background: linear-gradient(to right, #f2f9f2, #e0efe0);
   min-height: 100vh;
   padding: 60px 20px;
 }
@@ -93,18 +17,18 @@ html, body {
 
 .features-header h2 {
   font-size: 32px;
-  color: #5F7161; 
+  color: #5f7161;
   margin-bottom: 10px;
 }
-@media(max-width:1339px) and (min-width:1024px){
-  .features-header{
+@media (max-width: 1339px) and (min-width: 1024px) {
+  .features-header {
     text-align: center;
   }
 }
 
 .features-header p {
   font-size: 18px;
-  color: #333; 
+  color: #333;
   margin-bottom: 40px;
 }
 
@@ -129,13 +53,6 @@ html, body {
 }
 
 .feature-icon {
-  /* font-size: 32px;
-  color: #5F7161; 
-  background-color: #e9f4e9;
-  padding: 15px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  display: inline-block; */
   font-size: 24px;
   padding: 12px;
   background-color: #d6ebe0;
@@ -153,11 +70,11 @@ html, body {
 
 .feature-card h3 {
   font-size: 20px;
-  color: #5F7161; 
+  color: #5f7161;
   margin-bottom: 10px;
 }
 
 .feature-card p {
   font-size: 16px;
-  color: #333; 
+  color: #333;
 }

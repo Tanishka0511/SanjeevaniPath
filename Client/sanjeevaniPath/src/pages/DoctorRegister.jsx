@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./DoctorRegister.css";
-import doctorImage from "../assets/WhatsApp Image 2025-05-10 at 19.22.52_9ce8bdc5.jpg"; 
+import doctorImage from "../assets/WhatsApp Image 2025-05-10 at 19.22.52_9ce8bdc5.jpg";
 import { useNavigate } from "react-router-dom";
 
 const DoctorRegister = () => {
@@ -32,29 +32,34 @@ const DoctorRegister = () => {
       alert("Passwords do not match!");
       return;
     }
-
-    // Optional: More validation checks for fields like email
-    if (!formData.name || !formData.qualification || !formData.email || !formData.speciality) {
+    if (
+      !formData.name ||
+      !formData.qualification ||
+      !formData.email ||
+      !formData.speciality
+    ) {
       alert("Please fill all required fields.");
       return;
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/addDoctor", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://sanjeevanipath.onrender.com/api/addDoctor",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
       console.log("Server response:", data);
 
       if (response.ok) {
         alert("Doctor Registered successfully!");
-        
-        // Reset form after successful submission
+
         setFormData({
           name: "",
           qualification: "",
@@ -63,12 +68,11 @@ const DoctorRegister = () => {
           password: "",
           confirmPassword: "",
         });
-        
+
         navigate("/confirmDoc");
       } else {
         alert(data.message || "Something went wrong. Please check your email.");
       }
-
     } catch (err) {
       console.error("Registration error:", err);
       alert("Failed to submit form.");
@@ -82,71 +86,70 @@ const DoctorRegister = () => {
   return (
     <div className="doctors-login-container">
       <div className="login-card">
-           <div className="form-side">
-      <div className="back-button-wrap">
-        <button className="back-button" onClick={handleBackToHome}>
-          ← Back to Home
-        </button>
-      </div>
-      
-     
+        <div className="form-side">
+          <div className="back-button-wrap">
+            <button className="back-button" onClick={handleBackToHome}>
+              ← Back to Home
+            </button>
+          </div>
+
           <h2>
             Welcome! <br /> SignUp to create your account
           </h2>
           <form onSubmit={handleSubmit}>
             <label>Name</label>
-            <input 
-              type="text" 
-              name="name" 
+            <input
+              type="text"
+              name="name"
               placeholder="Please enter the name."
-              value={formData.name} 
+              value={formData.name}
               onChange={handleChange}
-              required 
+              required
             />
             <label>Qualification</label>
-            <input 
-              type="text" 
-              name="qualification" 
+            <input
+              type="text"
+              name="qualification"
               placeholder="Please enter your qualification."
               value={formData.qualification}
               onChange={handleChange}
-              required 
+              required
             />
             <label>Email</label>
-            <input 
-              type="email" 
-              name="email" 
+            <input
+              type="email"
+              name="email"
               placeholder="Please enter your email."
               value={formData.email}
               onChange={handleChange}
-              required 
+              required
             />
             <label>Speciality</label>
-            <input 
-              type="text" 
-              name="speciality" 
+            <input
+              type="text"
+              name="speciality"
               placeholder="Please enter your speciality."
               value={formData.speciality}
               onChange={handleChange}
-              required 
+              required
             />
             <label>Password</label>
-            <input 
-              type="password" 
-              name="password" 
+            <input
+              type="password"
+              name="password"
               placeholder="Enter password to continue."
               value={formData.password}
               onChange={handleChange}
-              required 
+              required
             />
             <label>Confirm Password</label>
-            <input 
-              type="password" 
-              name="confirmPassword" 
+            <input
+              type="password"
+              name="confirmPassword"
               placeholder="Enter password again to confirm"
               value={formData.confirmPassword}
               onChange={handleChange}
-              required 
+              required
             />
             <button type="submit">SignUp</button>
           </form>

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegFileAlt, FaRegClock, FaRegCommentDots } from "react-icons/fa";
 import "./ForDoctors.css";
-import imag1 from "../assets/photo-1551076805-e1869033e561.avif"
+import imag1 from "../assets/photo-1551076805-e1869033e561.avif";
 
 const ForDoctors = () => {
   return (
@@ -28,7 +28,8 @@ const ForDoctors = () => {
             <div>
               <h3>View patient history</h3>
               <p>
-                Access comprehensive patient records and medical history for informed consultations.
+                Access comprehensive patient records and medical history for
+                informed consultations.
               </p>
             </div>
           </div>
@@ -40,7 +41,8 @@ const ForDoctors = () => {
             <div>
               <h3>Get paid before consultations</h3>
               <p>
-                Receive payments upfront, eliminating concerns about billing and collections.
+                Receive payments upfront, eliminating concerns about billing and
+                collections.
               </p>
             </div>
           </div>
@@ -52,7 +54,8 @@ const ForDoctors = () => {
             <div>
               <h3>Secure chat and consultation notes</h3>
               <p>
-                Communicate with patients securely and document consultation notes easily within our platform.
+                Communicate with patients securely and document consultation
+                notes easily within our platform.
               </p>
             </div>
           </div>

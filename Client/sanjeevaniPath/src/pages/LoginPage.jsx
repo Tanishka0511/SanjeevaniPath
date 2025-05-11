@@ -8,7 +8,7 @@ const LoginPage = () => {
 
   const [formData, setFormData] = useState({
     email: "",
-    password: ""
+    password: "",
   });
 
   const handleBackToHome = () => {
@@ -18,7 +18,7 @@ const LoginPage = () => {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -26,12 +26,12 @@ const LoginPage = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/api/login", {
+      const res = await fetch("https://sanjeevanipath.onrender.com/api/login", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
 
       const data = await res.json();
@@ -53,12 +53,12 @@ const LoginPage = () => {
     <div className="register-login-container">
       <div className="login-card">
         <div className="form-side">
-      <div className="back-button-wrappLogin">
-        <button className="back-buttonn" onClick={handleBackToHome}>
-          ← Back to Home
-        </button>
-      </div>
-      
+          <div className="back-button-wrappLogin">
+            <button className="back-buttonn" onClick={handleBackToHome}>
+              ← Back to Home
+            </button>
+          </div>
+
           <h2>
             Welcome to <br /> SanjeevaniPath
           </h2>
@@ -84,7 +84,9 @@ const LoginPage = () => {
             <button type="submit">Login</button>
             <p className="alt-text">
               Don't have an account?{" "}
-              <Link to="/register" className="green-link">Sign up.</Link>
+              <Link to="/register" className="green-link">
+                Sign up.
+              </Link>
             </p>
           </form>
         </div>

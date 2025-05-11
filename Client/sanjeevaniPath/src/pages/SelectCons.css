@@ -1,12 +1,10 @@
-
-
-   .select-consultation-wrapper {
+.select-consultation-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 20px;
   min-height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background: linear-gradient(to right, #f0fdf4, #ffffff);
 }
 

@@ -1,9 +1,7 @@
-
 import React, { useState } from "react";
-import './PatientRegister.css';
+import "./PatientRegister.css";
 import loginImage from "../assets/WhatsApp Image 2025-05-10 at 19.19.25_5032489c.jpg";
 import { useNavigate } from "react-router-dom";
-
 
 const PatientRegister = () => {
   const navigate = useNavigate();
@@ -39,24 +37,26 @@ const PatientRegister = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/addUser", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://sanjeevanipath.onrender.com/api/addUser",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
       console.log("Server response:", data);
 
       if (response.ok) {
         alert("User Registed successfully!please confirm to proceed..");
-         navigate("/selectCons");
+        navigate("/selectCons");
       } else {
         alert(data.message || "Something went wrong.check your email");
       }
-
     } catch (err) {
       console.error("register error:", err);
       alert("Failed to submit form.");
@@ -65,13 +65,13 @@ const PatientRegister = () => {
 
   return (
     <div className="patient-login-container">
-       <div className="login-card">
-      <div className="back-button-wrapppat">
-        <button className="back-button" onClick={handleBackToHome}>
-          ← Back to Home
-        </button>
-      </div>
-     
+      <div className="login-card">
+        <div className="back-button-wrapppat">
+          <button className="back-button" onClick={handleBackToHome}>
+            ← Back to Home
+          </button>
+        </div>
+
         <div className="image-side">
           <img src={loginImage} alt="Doctor and patient" />
           <div className="image-overlay-text">
@@ -79,7 +79,11 @@ const PatientRegister = () => {
           </div>
         </div>
         <div className="form-side">
-          <h2>Welcome!<br />SignUp to create account</h2>
+          <h2>
+            Welcome!
+            <br />
+            SignUp to create account
+          </h2>
           <form onSubmit={handleSubmit}>
             <label>Name</label>
             <input

@@ -31,10 +31,11 @@ form select {
   font-size: 14px;
 }
 
-.submit-btn, .copy-btn {
+.submit-btn,
+.copy-btn {
   margin-top: 20px;
   padding: 10px 16px;
-  background-color: #5F7161;
+  background-color: #5f7161;
   color: white;
   border: none;
   border-radius: 6px;
@@ -44,7 +45,8 @@ form select {
   transition: background-color 0.2s;
 }
 
-.submit-btn:hover, .copy-btn:hover {
+.submit-btn:hover,
+.copy-btn:hover {
   background-color: #4b5d4f;
 }
 

@@ -4,7 +4,7 @@
   padding: 25px;
   background: #f4f4f9;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .chat-box {
@@ -21,7 +21,8 @@
   margin-bottom: 15px;
 }
 
-.user-msg, .bot-msg {
+.user-msg,
+.bot-msg {
   margin-bottom: 5px;
 }
 
@@ -39,7 +40,7 @@
 
 .input-area button {
   padding: 10px 15px;
-  background: #5F7161;
+  background: #5f7161;
   color: white;
   border: none;
   border-radius: 6px;

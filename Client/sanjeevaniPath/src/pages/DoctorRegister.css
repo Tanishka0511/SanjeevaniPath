@@ -1,120 +1,5 @@
-/* .doctors-login-container {
-  background: linear-gradient(to right, #f0fdf4, #ffffff);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-card {
-  display: flex;
-    background: linear-gradient(to right, #f0fdf4, #ffffff);
-  border-radius: 12px;
-  overflow: hidden;
-   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 1000px;
-}
-
-.form-side {
-  flex: 1;
-  padding: 40px;
-}
-
-.form-side h2 {
-  font-size: 20px;
-
-  color: #5F7161;
-}
-.form-side form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-side label {
-  margin: 10px 0 5px;
-  font-weight: bold;
-}
-
-.form-side input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-}
-
-.form-side button {
-  margin-top: 20px;
-  padding: 12px;
-  background-color: #5F7161;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.form-side button:hover {
-  background-color: #14532d;
-}
-
-.image-side {
-  flex: 1;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-}
-
-.image-side img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image-overlay-text {
-  position: absolute;
-  bottom: 30px;
-  left: 20px;
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px white;
-  background: none;
-}
-
-.image-overlay-text span {
-  display: block;
-  font-size: 30px;
-   color: #98d4ad;
-}
-
-
-.back-button-wrapper {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
-}
-
-.back-button {
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: #5F7161;
-  color: #fff;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-.back-button:hover {
-  background-color: #5F7179;
-} */
-
-
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -130,10 +15,10 @@ html, body {
 
 .login-card {
   display: flex;
-    background: linear-gradient(to right, #f0fdf4, #ffffff);
+  background: linear-gradient(to right, #f0fdf4, #ffffff);
   border-radius: 12px;
   overflow: hidden;
-   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 1000px;
 }
@@ -145,7 +30,7 @@ html, body {
 
 .form-side h2 {
   font-size: 20px;
-  color: #5F7161;
+  color: #5f7161;
 }
 .form-side form {
   display: flex;
@@ -167,7 +52,7 @@ html, body {
 .form-side button {
   margin-top: 20px;
   padding: 12px;
-  background-color: #5F7161;
+  background-color: #5f7161;
   color: white;
   border: none;
   border-radius: 8px;
@@ -207,7 +92,7 @@ html, body {
 .image-overlay-text span {
   display: block;
   font-size: 30px;
-   color: #98d4ad;
+  color: #98d4ad;
 }
 
 .back-button-wrap {
@@ -219,14 +104,14 @@ html, body {
   font-size: 14px;
   cursor: pointer;
   border-radius: 5px;
-  background-color: #5F7161;
+  background-color: #5f7161;
   color: #fff;
   border: none;
   transition: background-color 0.3s ease;
 }
 
 .back-button:hover {
-  background-color: #5F7179;
+  background-color: #5f7179;
 }
 @media (max-width: 768px) {
   .doctors-login-container {

@@ -1,16 +1,16 @@
-import React from 'react';
-import './SelectCons.css';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import "./SelectCons.css";
+import { useNavigate } from "react-router-dom";
 
 const SelectCons = () => {
   const navigate = useNavigate();
 
   const handleClickChat = () => {
-    navigate('/redirectToTiming');
+    navigate("/redirectToTiming");
   };
-  const handleClickVideo=()=>{
-    navigate('/videoCons');
-  }
+  const handleClickVideo = () => {
+    navigate("/videoCons");
+  };
 
   return (
     <div className="select-consultation-wrapper">

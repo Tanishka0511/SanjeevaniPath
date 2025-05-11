@@ -1,36 +1,42 @@
-import React, { useState } from 'react';
-import './Chatbot.css';
+import React, { useState } from "react";
+import "./Chatbot.css";
 
 export default function Chatbot() {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const handleSend = async () => {
     if (!query.trim()) return;
 
-    const newChat = { user: query, bot: '...' };
+    const newChat = { user: query, bot: "..." };
     setChatHistory([...chatHistory, newChat]);
-    setQuery('');
+    setQuery("");
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:5000/api/groqQuery', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: query }),
-      });
+      const res = await fetch(
+        "https://sanjeevanipath.onrender.com/api/groqQuery",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: query }),
+        }
+      );
 
       const data = await res.json();
 
       const updatedChat = {
         user: query,
-        bot: data?.response || 'No response.',
+        bot: data?.response || "No response.",
       };
 
-      setChatHistory(prev => [...prev.slice(0, -1), updatedChat]);
+      setChatHistory((prev) => [...prev.slice(0, -1), updatedChat]);
     } catch (err) {
-      setChatHistory(prev => [...prev.slice(0, -1), { user: query, bot: 'Server error.' }]);
+      setChatHistory((prev) => [
+        ...prev.slice(0, -1),
+        { user: query, bot: "Server error." },
+      ]);
       console.log(err);
     } finally {
       setLoading(false);
@@ -38,7 +44,7 @@ export default function Chatbot() {
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter') handleSend();
+    if (e.key === "Enter") handleSend();
   };
 
   return (
@@ -47,8 +53,12 @@ export default function Chatbot() {
       <div className="chat-box">
         {chatHistory.map((chat, idx) => (
           <div key={idx} className="chat-message">
-            <div className="user-msg"><strong>You:</strong> {chat.user}</div>
-            <div className="bot-msg"><strong>Bot:</strong> {chat.bot}</div>
+            <div className="user-msg">
+              <strong>You:</strong> {chat.user}
+            </div>
+            <div className="bot-msg">
+              <strong>Bot:</strong> {chat.bot}
+            </div>
           </div>
         ))}
       </div>
@@ -60,7 +70,9 @@ export default function Chatbot() {
           onKeyPress={handleKeyPress}
           placeholder="Type your question..."
         />
-        <button onClick={handleSend} disabled={loading}>Send</button>
+        <button onClick={handleSend} disabled={loading}>
+          Send
+        </button>
       </div>
     </div>
   );

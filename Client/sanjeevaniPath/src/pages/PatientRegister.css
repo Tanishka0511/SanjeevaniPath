@@ -1,6 +1,11 @@
-/* .patient-login-container {
-background: linear-gradient(to right, #f0fdf4, #ffffff);
-  height: 100vh;
+html,
+body {
+  overflow-x: hidden;
+}
+
+.patient-login-container {
+  background: linear-gradient(to right, #f0fdf4, #ffffff);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,12 +22,9 @@ background: linear-gradient(to right, #f0fdf4, #ffffff);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-
- .back-button-wrapper {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 1000;
+.back-button-wrapppat {
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .back-button {
@@ -30,14 +32,14 @@ background: linear-gradient(to right, #f0fdf4, #ffffff);
   font-size: 14px;
   cursor: pointer;
   border-radius: 5px;
-  background-color: #5F7161;
+  background-color: #5f7161;
   color: #fff;
   border: none;
   transition: background-color 0.3s ease;
 }
 
 .back-button:hover {
-  background-color: #5F7179;
+  background-color: #5f7179;
 }
 
 .image-side {
@@ -64,7 +66,7 @@ background: linear-gradient(to right, #f0fdf4, #ffffff);
   line-height: 1.3;
   z-index: 1;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  background: none; 
+  background: none;
 }
 
 .image-overlay-text span {
@@ -78,12 +80,12 @@ background: linear-gradient(to right, #f0fdf4, #ffffff);
   display: flex;
   flex-direction: column;
   justify-content: center;
-    background: none;
+  background: none;
 }
 
 .form-side h2 {
   font-size: 24px;
-  color: #5F7161;
+  color: #5f7161;
   margin-bottom: 24px;
 }
 
@@ -105,131 +107,7 @@ background: linear-gradient(to right, #f0fdf4, #ffffff);
 }
 
 .form-side button {
-  background-color: #5F7161;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 8px;
-  margin-top: 12px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.form-side button:hover {
-  background-color: #14532d;
-} */
-
-
-html, body {
-  overflow-x: hidden;
-}
-
-.patient-login-container {
-background: linear-gradient(to right, #f0fdf4, #ffffff);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.login-card {
-  background: linear-gradient(to right, #f0fdf4, #ffffff);
-  display: flex;
-  border-radius: 12px;
-  overflow: hidden;
-  width: 90%;
-  max-width: 1000px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-
- .back-button-wrapppat {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.back-button {
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: #5F7161;
-  color: #fff;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-.back-button:hover {
-  background-color: #5F7179;
-}
-
-.image-side {
-  position: relative;
-  flex: 1;
-  padding: 0;
-  overflow: hidden;
-}
-
-.image-side img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.image-overlay-text {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1.3;
-  z-index: 1;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* helps make white text readable */
-  background: none; /* ✅ Ensure background is completely removed */
-}
-
-.image-overlay-text span {
-  font-weight: bold;
-  color: #bbf7d0;
-}
-
-.form-side {
-  flex: 1;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-    background: none;
-}
-
-.form-side h2 {
-  font-size: 24px;
-  color: #5F7161;
-  margin-bottom: 24px;
-}
-
-.form-side form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-side label {
-  font-weight: bold;
-  margin: 8px 0 4px;
-}
-
-.form-side input {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 12px;
-}
-
-.form-side button {
-  background-color: #5F7161;
+  background-color: #5f7161;
   color: white;
   border: none;
   padding: 12px;

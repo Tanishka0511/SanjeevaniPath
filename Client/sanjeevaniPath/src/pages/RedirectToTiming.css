@@ -8,14 +8,14 @@
 .page-heading {
   text-align: center;
   font-size: 38px;
-  color: #5F7161;
+  color: #5f7161;
   margin-bottom: 30px;
   font-weight: bold;
   margin-right: 40px;
 }
 
 .full {
-  border: 2px solid #5F7161;
+  border: 2px solid #5f7161;
   border-radius: 12px;
   padding: 20px;
   display: flex;
@@ -33,14 +33,14 @@
 
 .react-calendar {
   background: #fff;
-  border: 2px solid #5F7161;
+  border: 2px solid #5f7161;
   border-radius: 10px;
   padding: 8px;
   font-family: inherit;
 }
 
 .react-calendar__tile--active {
-  background: #5F7161 !important;
+  background: #5f7161 !important;
   color: white !important;
   border-radius: 8px;
 }
@@ -58,7 +58,7 @@
   gap: 10px;
   background-color: white;
   border-radius: 10px;
-  border: 2px solid #5F7161;
+  border: 2px solid #5f7161;
 }
 
 .duration-options {
@@ -71,7 +71,7 @@
 .time-slot {
   padding: 10px 16px;
   margin: 2px;
-  border: 1px solid #5F7161;
+  border: 1px solid #5f7161;
   background-color: white;
   cursor: pointer;
   border-radius: 8px;
@@ -80,8 +80,8 @@
 
 .duration-options button.active,
 .time-slot.active {
-  border: 2px solid #5F7161;
-  background-color: #5F7161;
+  border: 2px solid #5f7161;
+  background-color: #5f7161;
   color: white;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .slot-list::-webkit-scrollbar-thumb {
-  background-color: #5F7161;
+  background-color: #5f7161;
   border-radius: 4px;
 }
 
@@ -121,7 +121,7 @@
   border: none;
   border-radius: 10px;
   font-weight: bold;
-  background: #5F7161;
+  background: #5f7161;
   color: white;
   cursor: pointer;
   transition: 0.3s ease;
@@ -133,11 +133,11 @@
 }
 
 .time-selection h4:nth-of-type(2)::before {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #5F7161;
+  background-color: #5f7161;
   margin-bottom: 10px;
 }
 

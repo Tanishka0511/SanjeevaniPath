@@ -1,7 +1,7 @@
 import React from "react";
 import { FaUserMd, FaFileMedical, FaMoneyCheckAlt } from "react-icons/fa";
 import "./ForPatients.css";
-import image1 from '../assets/photo-1579684385127-1ef15d508118.avif'
+import image1 from "../assets/photo-1579684385127-1ef15d508118.avif";
 
 const ForPatients = () => {
   return (
@@ -11,7 +11,8 @@ const ForPatients = () => {
           <div className="fp-header">
             <h2>For Patients</h2>
             <p>
-              Get the healthcare you need on your schedule, without the waiting room.
+              Get the healthcare you need on your schedule, without the waiting
+              room.
             </p>
           </div>
 
@@ -23,8 +24,8 @@ const ForPatients = () => {
               <div>
                 <h3>Find and book doctors</h3>
                 <p>
-                  Browse through our network of qualified healthcare providers and schedule
-                  appointments based on availability.
+                  Browse through our network of qualified healthcare providers
+                  and schedule appointments based on availability.
                 </p>
               </div>
             </div>
@@ -36,8 +37,8 @@ const ForPatients = () => {
               <div>
                 <h3>Share health records securely</h3>
                 <p>
-                  Upload and share your medical history and records with healthcare providers
-                  securely and confidentially.
+                  Upload and share your medical history and records with
+                  healthcare providers securely and confidentially.
                 </p>
               </div>
             </div>
@@ -49,8 +50,8 @@ const ForPatients = () => {
               <div>
                 <h3>Prepay for sessions</h3>
                 <p>
-                  Make payments securely before your consultation to streamline the process and
-                  focus on your health.
+                  Make payments securely before your consultation to streamline
+                  the process and focus on your health.
                 </p>
               </div>
             </div>
