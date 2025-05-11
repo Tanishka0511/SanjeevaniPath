@@ -52,6 +52,8 @@ const RedirectToTiming = () => {
 
   return (
     <div className="booking-container">
+       <h1 className="page-heading">Select Consultation <br />Time </h1>
+      <div className="full">
       <div className="calendar-container">
         <Calendar
           onChange={setSelectedDate}
@@ -78,7 +80,7 @@ const RedirectToTiming = () => {
             1 hour
           </button>
         </div>
-
+        <u></u>
         <h4>What time works best?</h4>
         <p>
           Showing times for <strong>{format(selectedDate, 'MMMM d, yyyy')}</strong>
@@ -100,8 +102,9 @@ const RedirectToTiming = () => {
           disabled={!selectedDuration || !selectedTime}
           onClick={handleRegister}
         >
-          Register
+          Book
         </button>
+      </div>
       </div>
     </div>
   );

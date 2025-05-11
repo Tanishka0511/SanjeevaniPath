@@ -1,14 +1,52 @@
-
-import React from "react";
+import React, { useState } from "react";
 import "./LoginPage.css";
-import doctorImage from "../assets/register.jpg"; 
-import { useNavigate,Link } from "react-router-dom";
+import doctorImage from "../assets/register.jpg";
+import { useNavigate, Link } from "react-router-dom";
 
 const LoginPage = () => {
   const navigate = useNavigate();
 
+  const [formData, setFormData] = useState({
+    email: "",
+    password: ""
+  });
+
   const handleBackToHome = () => {
     navigate("/");
+  };
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("http://localhost:5000/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await res.json();
+      console.log("Login Response:", data);
+
+      if (res.ok) {
+        alert("Login successful!");
+        navigate("/selectCons");
+      } else {
+        alert(data.message || "Login failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("An error occurred while logging in.");
+    }
   };
 
   return (
@@ -23,22 +61,34 @@ const LoginPage = () => {
           <h2>
             Welcome to <br /> SanjeevaniPath
           </h2>
-          <form>
+          <form onSubmit={handleSubmit}>
             <label>Email</label>
-            <input type="email" placeholder="Please enter your email." />
+            <input
+              type="email"
+              name="email"
+              placeholder="Please enter your email."
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
             <label>Password</label>
-            <input type="password" placeholder="Enter your password." />
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password."
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
             <button type="submit">Login</button>
-           <p className="alt-text">
-          Don't have an account? <a href="#" className="green-link"><Link to="/register"> Sign up. </Link></a>
-        </p>
-       
-           
+            <p className="alt-text">
+              Don't have an account?{" "}
+              <Link to="/register" className="green-link">Sign up.</Link>
+            </p>
           </form>
         </div>
         <div className="image-side">
           <img src={doctorImage} alt="Doctor" />
-         
         </div>
       </div>
     </div>
@@ -46,4 +96,3 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-

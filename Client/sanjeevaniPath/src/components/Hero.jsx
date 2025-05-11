@@ -8,6 +8,9 @@ export default function Home() {
   const handleLoginClick=()=>{
     navigate('./login')
   }
+  const handleClickCons=()=>{
+    navigate('./selectCons')
+  }
   return (
     <div className="homepage">
       <main className="main-content">
@@ -21,7 +24,7 @@ export default function Home() {
             Get the care you need, when you need it.
           </p>
           <div className="button-group">
-            <button className="book">Book Consultation</button>
+            <button className="book" onClick={handleClickCons}>Book Consultation</button>
             <button className="login-register" onClick={handleLoginClick}>Login</button>
           </div>
         </div>

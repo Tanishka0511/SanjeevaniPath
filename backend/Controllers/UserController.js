@@ -65,8 +65,8 @@ exports.loginUser = async (req, res) => {
       });
     }
 
-    console.log("Entered password:", password);
-    console.log("Hashed password from DB:", findUser.password);
+    // console.log("Entered password:", password);
+    // console.log("Hashed password from DB:", findUser.password);
 
     const passwordMatch = await bcrypt.compare(password, findUser.password);
     if (!passwordMatch) {

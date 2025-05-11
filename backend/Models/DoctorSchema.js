@@ -24,14 +24,7 @@ const doctor = new mongoose.Schema({
         minlength:8,
         select:false
     },
-    confirmPassword:{
-        type:String,
-        select:false,
-        validator:function(value) {
-            return value === this.password
-        },
-        message:'password and confirm password does not match'
-    }
+   
 })
 const DocSchema = mongoose.model('Doctor',doctor);
 module.exports = DocSchema;

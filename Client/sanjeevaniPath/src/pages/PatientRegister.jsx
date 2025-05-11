@@ -52,7 +52,7 @@ const PatientRegister = () => {
 
       if (response.ok) {
         alert("User Registed successfully!please confirm to proceed..");
-         navigate("/redirectToTiming");
+         navigate("/selectCons");
       } else {
         alert(data.message || "Something went wrong.check your email");
       }

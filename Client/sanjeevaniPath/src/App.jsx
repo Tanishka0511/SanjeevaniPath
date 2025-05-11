@@ -7,6 +7,8 @@ import DoctorRegister from "./pages/DoctorRegister";
 import PatientRegister from "./pages/PatientRegister";
 import RedirectToTiming from "./pages/RedirectToTIming";
 import ConfirmationPage from "./pages/ConfirmationPage";
+import DocConfirmation from "./pages/DocConfirmation";
+import SelectCons from "./pages/SelectCons";
 
 const App = () => (
   <Router>
@@ -18,6 +20,9 @@ const App = () => (
       <Route path="/register" element={<Register/>}/>
        <Route path="/redirectToTiming" element={<RedirectToTiming/>}/>
        <Route path="/confirmPage" element={<ConfirmationPage/>}/>
+       <Route path="/confirmDoc" element={<DocConfirmation/>}/>
+       <Route path="/selectCons" element={<SelectCons/>}/>
+
     </Routes>
   </Router>
 );
