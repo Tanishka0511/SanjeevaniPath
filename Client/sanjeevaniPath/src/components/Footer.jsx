@@ -19,9 +19,9 @@ const Footer = () => {
               <h4 className="qh-footer-heading">Quick Links</h4>
               <ul className="qh-footer-list">
                 <li><a href="/" className="qh-footer-link">Home</a></li>
-                <li><a href="/about" className="qh-footer-link">About Us</a></li>
-                <li><a href="/services" className="qh-footer-link">Our Services</a></li>
-                <li><a href="/contact" className="qh-footer-link">Contact</a></li>
+                <li><a href="#AboutUs" className="qh-footer-link">About Us</a></li>
+                <li><a href="#features" className="qh-footer-link">Our Services</a></li>
+                <li><a href="#ContactUs" className="qh-footer-link">Contact</a></li>
               </ul>
             </div>
 

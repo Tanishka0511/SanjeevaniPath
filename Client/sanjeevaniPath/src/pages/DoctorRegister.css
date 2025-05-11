@@ -1,5 +1,4 @@
-
-   .register-login-container {
+.doctors-login-container {
   background: linear-gradient(to right, #f0fdf4, #ffffff);
   height: 100vh;
   display: flex;
@@ -23,13 +22,10 @@
 }
 
 .form-side h2 {
-  font-size: 24px;
-  font-weight:900;
-  margin-bottom: 30px;
+  font-size: 20px;
+  /* margin-bottom: 20px; */
   color: #5F7161;
-  margin-left: 40px;
 }
-
 .form-side form {
   display: flex;
   flex-direction: column;
@@ -116,8 +112,3 @@
 .back-button:hover {
   background-color: #5F7179;
 }
-
- .alt-text {
-    font-size: 14px;
-    margin-top: 20px;
-  }

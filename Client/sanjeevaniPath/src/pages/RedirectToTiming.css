@@ -1,0 +1,153 @@
+.booking-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  gap: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.bordered {
+  border: 2px solid #5F7161;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.calendar-container {
+  background-color: #5F7161;
+  color: white;
+  text-align: center;
+  width: 300px;
+}
+
+.react-calendar {
+  background: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.react-calendar__tile--active {
+  background: #5F7161 !important;
+  color: white !important;
+}
+
+.react-calendar__tile:enabled:hover {
+  background: #889488 !important;
+}
+
+.time-selection {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.duration-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.duration-options button {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.duration-options button:hover {
+  background: #f0f0f0;
+}
+
+.slot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 200px; /* limit height to calendar size */
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.slot-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.slot-list::-webkit-scrollbar-thumb {
+  background-color: #5F7161;
+  border-radius: 4px;
+}
+
+
+.time-slot {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.time-slot.selected {
+  background: #5F7161;
+  color: white;
+  font-weight: bold;
+}
+
+.time-slot:hover {
+  background: #f5f5f5;
+}
+
+.confirm-button {
+  margin-top: 20px;
+  padding: 12px;
+  background: linear-gradient(to right, #5F7161, #7e8b7b);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.confirm-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.duration-options button,
+.time-slot {
+  padding: 10px 16px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.duration-options button.active,
+.time-slot.active {
+  border: 2px solid #5F7161;
+  background-color: #5F7161;
+  color: white;
+}
+
+.register-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #5F7161, #8A9A5B);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.register-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+

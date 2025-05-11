@@ -1,29 +1,49 @@
-import React from "react";
-import Navbar from "../components/Navbar"; // Adjust if path differs
-import "./LoginPage.css"; // Ensure CSS file is in the same folder
 
-const LoginPage = () => (
-  <div className="main">
-    <Navbar />
-    <div className="login-container">
-      <div className="login-box">
-        <h2>For <strong>Doctors</strong></h2>
-        <p>Thousands of doctors trust our platform to manage patients,access tools,and stay up-to-date throughout every stage of their medical careers.</p>
-        <button className="login-button black">Login</button>
-        <p className="alt-text">
-          Don't have an account? <a href="#" className="green-link">Sign up.</a>
-        </p>
+import React from "react";
+import "./LoginPage.css";
+import doctorImage from "../assets/register.jpg"; 
+import { useNavigate,Link } from "react-router-dom";
+
+const LoginPage = () => {
+  const navigate = useNavigate();
+
+  const handleBackToHome = () => {
+    navigate("/");
+  };
+
+  return (
+    <div className="register-login-container">
+      <div className="back-button-wrapper">
+        <button className="back-button" onClick={handleBackToHome}>
+          ← Back to Home
+        </button>
       </div>
-      <div className="login-box">
-        <h2>For <strong>Patients</strong></h2>
-        <p>Thousands of patients rely on our platform to connect with doctors,manage appointments,and access quality healthcare anytime,anywhere.</p>
-        <button className="login-button white">Login</button>
-        <p className="alt-text">
-          Don't have an account? <a href="#" className="green-link">Sign up.</a>
+      <div className="login-card">
+        <div className="form-side">
+          <h2>
+            Welcome to <br /> SanjeevaniPath
+          </h2>
+          <form>
+            <label>Email</label>
+            <input type="email" placeholder="Please enter your email." />
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password." />
+            <button type="submit">Login</button>
+           <p className="alt-text">
+          Don't have an account? <a href="#" className="green-link"><Link to="/register"> Sign up. </Link></a>
         </p>
+       
+           
+          </form>
+        </div>
+        <div className="image-side">
+          <img src={doctorImage} alt="Doctor" />
+         
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default LoginPage;
+

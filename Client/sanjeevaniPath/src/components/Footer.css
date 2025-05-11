@@ -22,6 +22,14 @@
   flex: 1 1 100%;
   max-width: 300px;
 }
+@media(max-width:1339px) and (min-width:1024px){
+  .qh-brand{
+    margin: 0 150px;
+    max-width: 2000px;
+    text-align: center;
+  }
+}
+
 
 .qh-footer-title {
   font-size: 1.5rem;
@@ -43,6 +51,11 @@
   flex: 2 1 600px;
   flex-wrap: wrap;
   /* margin-left: 1rem; */
+}
+@media(max-width:1339px) and (min-width:1024px){
+  .qh-links-group{
+    margin: 0 170px;
+  }
 }
 
 .qh-footer-heading {

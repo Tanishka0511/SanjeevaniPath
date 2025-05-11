@@ -15,6 +15,11 @@
   color: #5F7161; 
   margin-bottom: 10px;
 }
+@media(max-width:1339px) and (min-width:1024px){
+  .features-header h2{
+    margin: 0 340px;
+  }
+}
 
 .features-header p {
   font-size: 18px;

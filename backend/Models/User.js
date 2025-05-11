@@ -1,37 +1,47 @@
+
 const mongoose = require('mongoose');
 const validator = require('validator');
-const user = new mongoose.Schema({
-    name:{
-        type:String,
-        required:[true,'please enter the name']
-    },
-    email:{
-        type:String,
-        required:[true,'please enter the gmail'],
-        validator:[validator.isEmail,'please enter the valid email address']
-    },
-    phone_no:{
-        type:Number,
-        required:[true,'please enter the phoneno'],
-        minlength:10,
-        maxlength:10
-    },
-    password:{
-        type:String,
-        required:[true,'please enter the password'],
-        minlength:8,
-        select:false
-    },
-    confirmPassword:{
-        type:String,
-        required:[true,'please confirm the password to proceed'],
-        validate:{
-            validator:function(value) {
-                return value === this.password;
-            },
-            message:'password and confirm password does not match'
-        }
+const bcrypt=require('bcryptjs')
+
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: [true, 'Please enter the name'],
+  },
+  email: {
+    type: String,
+    required: [true, 'Please enter the email'],
+    unique: true,
+    validate: {
+      validator: validator.isEmail,
+      message: 'Please enter a valid email address'
     }
+  },
+  phone_no: {
+    type: String, // Changed from Number to String
+    required: [true, 'Please enter the phone number'],
+    unique: true,
+    minlength: [10, 'Phone number must be 10 digits'],
+    maxlength: [10, 'Phone number must be 10 digits']
+  },
+  password: {
+    type: String,
+    required: [true, 'Please enter the password'],
+    minlength: [8, 'Password must be at least 8 characters'],
+    select: false
+  }
 });
-const userSchema = mongoose.model('User',user);
-module.exports = userSchema;
+
+
+userSchema.pre('save', async function (next) {
+  if (!this.isModified('password')) return next(); // Only hash if password is new/modified
+
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
+  next();
+});
+
+
+const User = mongoose.model('User', userSchema);
+module.exports = User;
+
