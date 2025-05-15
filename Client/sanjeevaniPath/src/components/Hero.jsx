@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import heroImage from "../assets/photo-1576091160550-2173dba999ef.avif"; // Correct image import
+import heroImage from "../assets/photo-1576091160550-2173dba999ef.avif"; 
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
