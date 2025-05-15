@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./LoginPage.css";
 import doctorImage from "../assets/register.jpg";
 import { useNavigate, Link } from "react-router-dom";
+import {jwtDecode} from "jwt-decode";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -37,8 +38,21 @@ const LoginPage = () => {
       const data = await res.json();
       console.log("Login Response:", data);
 
-      if (res.ok) {
+      if (res.ok && data.accessToken) {
         alert("Login successful!");
+
+const decoded = jwtDecode(data.accessToken);
+const userId = decoded.userId;
+        if (userId) {
+          localStorage.setItem("patientId", userId);
+          console.log("Patient ID:", userId);
+        } else {
+          console.warn("userId not found in decoded token");
+        }
+
+        // Optional: store token
+        localStorage.setItem("accessToken", data.accessToken);
+
         navigate("/selectCons");
       } else {
         alert(data.message || "Login failed. Please try again.");

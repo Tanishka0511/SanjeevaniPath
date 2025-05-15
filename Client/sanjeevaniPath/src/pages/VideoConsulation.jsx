@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./VideoConsulation.css";
 
@@ -6,13 +6,18 @@ export default function VideoConsulation() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     Patient: "",
-    // Doctor: "",
+    Doctor: "",
     speciality: "",
     symptoms: "",
     status: "scheduled",
     information: "",
   });
-
+useEffect(() => {
+    const storedPatientId = localStorage.getItem("patientId");
+    if (storedPatientId) {
+      setFormData((prev) => ({ ...prev, Patient: storedPatientId }));
+    }
+  }, []);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -59,7 +64,7 @@ export default function VideoConsulation() {
           onChange={handleChange}
           required
         />
-{/* 
+
         <label>Doctor ID:</label>
         <input
           type="text"
@@ -67,7 +72,7 @@ export default function VideoConsulation() {
           value={formData.Doctor}
           onChange={handleChange}
           required
-        /> */}
+        />
 
         <label>Speciality:</label>
         <input
