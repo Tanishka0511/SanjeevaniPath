@@ -22,8 +22,6 @@ exports.addUser = async (req, res, next) => {
         message: "User with same email or phone number already exists."
       });
     }
-
-    // ✅ Save user with raw password — password will be hashed in model
     const newUser = new User({
       name,
       email,

@@ -5,11 +5,11 @@ const consultation = new mongoose.Schema({
         ref:'User',
         required:[true,'please enter the patient name']
     },
-    Doctor:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'Doctor',
-        required:[true,'please enter the doctor name']
-    },
+    // Doctor:{
+    //     type:mongoose.Schema.Types.ObjectId,
+    //     ref:'Doctor',
+    //     required:[true,'please enter the doctor name']
+    // },
     speciality:{
         type:String,
         required:true

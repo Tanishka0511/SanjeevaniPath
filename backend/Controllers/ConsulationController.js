@@ -54,7 +54,7 @@ exports.getAllConsultations = async (req, res) => {
   try {
     const consultations = await Consultation.find()
       .populate('Patient')
-      .populate('Doctor')
+      // .populate('Doctor')
       .exec();
 
     res.status(200).json({
@@ -78,7 +78,7 @@ exports.getConsultationById = async (req, res) => {
   try {
     const consultation = await Consultation.findById(consultationId)
       .populate('Patient')
-      .populate('Doctor')
+      // .populate('Doctor')
       .exec();
 
     if (!consultation) {

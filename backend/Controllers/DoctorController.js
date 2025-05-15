@@ -1,6 +1,6 @@
 
 
-const Doctor = require('./../Models/DoctorSchema'); // Assuming you have this model defined in DoctorSchema
+const Doctor = require('./../Models/DoctorSchema'); 
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
